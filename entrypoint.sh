@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ -z $GOACCESS_SCHEDULE ]]; then
-    GOACCESS_SCHEDULE=$DEFAULT_SCHEDULE
+    GOACCESS_SCHEDULE="$DEFAULT_SCHEDULE"
 fi
 
 # check GoAccess command line args
