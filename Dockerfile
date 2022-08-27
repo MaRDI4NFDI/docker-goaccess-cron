@@ -44,6 +44,7 @@ RUN cp "/usr/share/zoneinfo/${TIMEZONE}" /etc/localtime && \
 RUN touch /var/log/cron.log
 
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY goaccess-wrapper.sh /goaccess-wrapper.sh
+RUN chmod +x /entrypoint.sh /goaccess-wrapper.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
