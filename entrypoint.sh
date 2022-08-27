@@ -14,7 +14,7 @@ else
 fi
 
 # create cronjob (overriding the predefined alpine cron "run-parts" maintenance pattern)
-echo "${GOACCESS_SCHEDULE} /goaccess-wrapper.sh ${GOACCESS_ARGS} >> /var/log/cron.log 3>&1" > /var/spool/cron/crontabs/root
+echo "${GOACCESS_SCHEDULE} /goaccess-wrapper.sh ${GOACCESS_ARGS} >> /var/log/cron.log 2>&1" > /var/spool/cron/crontabs/root
 echo "" >> /var/spool/cron/crontabs/root
 
 crond
