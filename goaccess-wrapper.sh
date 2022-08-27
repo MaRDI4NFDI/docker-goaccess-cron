@@ -8,4 +8,5 @@ GOACCESS_ARGS=( "$@" )
 if [[ "$2" == *.log.1 ]] && [[ ! -f "$2" ]]; then
     unset "GOACCESS_ARGS[1]"
 fi
-/bin/goaccess "${GOACCESS_ARGS[*]}"
+
+/bin/goaccess "${GOACCESS_ARGS[@]}"
